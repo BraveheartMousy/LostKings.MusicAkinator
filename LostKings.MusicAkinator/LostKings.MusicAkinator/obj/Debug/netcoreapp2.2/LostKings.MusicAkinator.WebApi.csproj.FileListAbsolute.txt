@@ -1,0 +1,14 @@
+E:\LostKings.MusicAkinator\Infopulse_TestTask\Infopulse_TestTask\bin\Debug\netcoreapp2.2\LostKings.MusicAkinator.WebApi.deps.json
+E:\LostKings.MusicAkinator\Infopulse_TestTask\Infopulse_TestTask\bin\Debug\netcoreapp2.2\LostKings.MusicAkinator.WebApi.runtimeconfig.json
+E:\LostKings.MusicAkinator\Infopulse_TestTask\Infopulse_TestTask\bin\Debug\netcoreapp2.2\LostKings.MusicAkinator.WebApi.runtimeconfig.dev.json
+E:\LostKings.MusicAkinator\Infopulse_TestTask\Infopulse_TestTask\bin\Debug\netcoreapp2.2\LostKings.MusicAkinator.WebApi.dll
+E:\LostKings.MusicAkinator\Infopulse_TestTask\Infopulse_TestTask\bin\Debug\netcoreapp2.2\LostKings.MusicAkinator.WebApi.pdb
+E:\LostKings.MusicAkinator\Infopulse_TestTask\Infopulse_TestTask\obj\Debug\netcoreapp2.2\LostKings.MusicAkinator.WebApi.csproj.CoreCompileInputs.cache
+E:\LostKings.MusicAkinator\Infopulse_TestTask\Infopulse_TestTask\obj\Debug\netcoreapp2.2\LostKings.MusicAkinator.WebApi.RazorAssemblyInfo.cache
+E:\LostKings.MusicAkinator\Infopulse_TestTask\Infopulse_TestTask\obj\Debug\netcoreapp2.2\LostKings.MusicAkinator.WebApi.RazorAssemblyInfo.cs
+E:\LostKings.MusicAkinator\Infopulse_TestTask\Infopulse_TestTask\obj\Debug\netcoreapp2.2\LostKings.MusicAkinator.WebApi.AssemblyInfoInputs.cache
+E:\LostKings.MusicAkinator\Infopulse_TestTask\Infopulse_TestTask\obj\Debug\netcoreapp2.2\LostKings.MusicAkinator.WebApi.AssemblyInfo.cs
+E:\LostKings.MusicAkinator\Infopulse_TestTask\Infopulse_TestTask\obj\Debug\netcoreapp2.2\LostKings.MusicAkinator.WebApi.RazorTargetAssemblyInfo.cache
+E:\LostKings.MusicAkinator\Infopulse_TestTask\Infopulse_TestTask\obj\Debug\netcoreapp2.2\LostKings.MusicAkinator.WebApi.dll
+E:\LostKings.MusicAkinator\Infopulse_TestTask\Infopulse_TestTask\obj\Debug\netcoreapp2.2\LostKings.MusicAkinator.WebApi.pdb
+E:\LostKings.MusicAkinator\Infopulse_TestTask\Infopulse_TestTask\obj\Debug\netcoreapp2.2\LostKings.MusicAkinator.WebApi.csprojAssemblyReference.cache

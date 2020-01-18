@@ -1,0 +1,14 @@
+E:\Core\Infopulse_TestTask\Infopulse_TestTask\bin\Debug\netcoreapp2.2\Infopulse_TestTask.deps.json
+E:\Core\Infopulse_TestTask\Infopulse_TestTask\bin\Debug\netcoreapp2.2\Infopulse_TestTask.runtimeconfig.json
+E:\Core\Infopulse_TestTask\Infopulse_TestTask\bin\Debug\netcoreapp2.2\Infopulse_TestTask.runtimeconfig.dev.json
+E:\Core\Infopulse_TestTask\Infopulse_TestTask\bin\Debug\netcoreapp2.2\Infopulse_TestTask.dll
+E:\Core\Infopulse_TestTask\Infopulse_TestTask\bin\Debug\netcoreapp2.2\Infopulse_TestTask.pdb
+E:\Core\Infopulse_TestTask\Infopulse_TestTask\obj\Debug\netcoreapp2.2\Infopulse_TestTask.csprojAssemblyReference.cache
+E:\Core\Infopulse_TestTask\Infopulse_TestTask\obj\Debug\netcoreapp2.2\Infopulse_TestTask.csproj.CoreCompileInputs.cache
+E:\Core\Infopulse_TestTask\Infopulse_TestTask\obj\Debug\netcoreapp2.2\Infopulse_TestTask.RazorAssemblyInfo.cache
+E:\Core\Infopulse_TestTask\Infopulse_TestTask\obj\Debug\netcoreapp2.2\Infopulse_TestTask.RazorAssemblyInfo.cs
+E:\Core\Infopulse_TestTask\Infopulse_TestTask\obj\Debug\netcoreapp2.2\Infopulse_TestTask.AssemblyInfoInputs.cache
+E:\Core\Infopulse_TestTask\Infopulse_TestTask\obj\Debug\netcoreapp2.2\Infopulse_TestTask.AssemblyInfo.cs
+E:\Core\Infopulse_TestTask\Infopulse_TestTask\obj\Debug\netcoreapp2.2\Infopulse_TestTask.RazorTargetAssemblyInfo.cache
+E:\Core\Infopulse_TestTask\Infopulse_TestTask\obj\Debug\netcoreapp2.2\Infopulse_TestTask.dll
+E:\Core\Infopulse_TestTask\Infopulse_TestTask\obj\Debug\netcoreapp2.2\Infopulse_TestTask.pdb

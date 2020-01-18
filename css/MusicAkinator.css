@@ -1,0 +1,55 @@
+body {	
+	font-family: Orbitron;
+	font-size: 16px;
+}
+
+.container {
+	width: 100%;
+	padding-top: calc(6rem + 72px);
+	padding-bottom: 6rem;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center!important;
+}
+
+.header {
+	margin: 20px;
+}
+
+button {
+	background: transparent;
+	border-color: #2196F3;
+	color: dodgerblue;
+	border-radius: 5px;
+	background-color: white;
+	padding: 8px 28px;
+	font-size: 16px;
+	cursor: pointer;
+	display: inline-block;
+	margin: 20px 2px;
+	font-family: inherit;
+}
+
+button:hover {
+	color: white;
+	background-color: dodgerblue;
+}
+
+input {	
+	padding: .375rem .75rem;
+	font-size: 1rem;
+	line-height: 1.5;
+	color: #495057;
+	background-color: #fff;
+	background-clip: padding-box;
+	border: 1px solid #ced4da;
+	border-radius: .25rem;
+	transition: border-color .15s ease-in-out,box-shadow .15s 
+}
+
+#percent {
+	font-size: 1.5em;
+	margin: 10px;
+}
