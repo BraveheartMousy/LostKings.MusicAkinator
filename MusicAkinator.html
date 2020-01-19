@@ -2,17 +2,34 @@
 <html>
 <head>
 	<meta charset="utf-8" />
-	<title>MusicAkinator</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Music Akinator</title>
 	<link rel="stylesheet" type="text/css" href="css/MusicAkinator.css">
-	<link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet'>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<script src="js/jquery-3.1.1.min.js"></script>
 	<script src="js/MusicAkinator.js"></script>
 </head>
 <body>
-	<div class="container">
-		<div class="header">MusicAkinator</div>
-		<div>Song text: <input id="songText" size="40"></div>
-		<button onclick="start()">Start</button>
-	</div>
+	<section id="cover" class="min-vh-100">
+		<div id="cover-caption">
+			<div class="container">
+				<div class="row text-white">
+					<div class="col-xl-7 col-lg-8 col-md-10 col-sm-10 mx-auto text-center form p-4">
+						<section class="inputTextSong">
+							<h1>Music Akinator</h1>
+							<form id="inputSongText">
+								<div class="input-group mb-3">
+									<input type="text" class="form-control" placeholder="Enter song text here" aria-label="Song text" aria-describedby="song-text">
+									<div class="input-group-append">
+										<button class="btn btn-primary" type="submit" id="song-text" size="100">Go!</button>
+									</div>
+								</div>
+							</form>
+						</section>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 </body>
 </html>

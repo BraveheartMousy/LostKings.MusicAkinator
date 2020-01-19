@@ -1,55 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+
+
+.suggestedSong, .form4 {
+	display: none;
+}
+
 body {	
-	font-family: Orbitron;
-	font-size: 16px;
+	font-family: Orbitron !important;
+	font-size: 16px !important;
+	letter-spacing: 3px;
+	height: 100vh;
+	width: 100vw;
 }
 
-.container {
-	width: 100%;
-	padding-top: calc(6rem + 72px);
-	padding-bottom: 6rem;
-	padding-right: 15px;
-	padding-left: 15px;
-	margin-right: auto;
-	margin-left: auto;
-	text-align: center!important;
+#cover {
+    background: #222 url('../static/background.jpg') 100% 100% no-repeat;
+    background-size: cover;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    position: relative;
 }
 
-.header {
-	margin: 20px;
+#cover-caption {
+    width: 100%;
+    position: relative;
+    z-index: 1;
 }
 
-button {
-	background: transparent;
-	border-color: #2196F3;
-	color: dodgerblue;
-	border-radius: 5px;
-	background-color: white;
-	padding: 8px 28px;
-	font-size: 16px;
-	cursor: pointer;
-	display: inline-block;
-	margin: 20px 2px;
-	font-family: inherit;
-}
-
-button:hover {
-	color: white;
-	background-color: dodgerblue;
-}
-
-input {	
-	padding: .375rem .75rem;
-	font-size: 1rem;
-	line-height: 1.5;
-	color: #495057;
-	background-color: #fff;
-	background-clip: padding-box;
-	border: 1px solid #ced4da;
-	border-radius: .25rem;
-	transition: border-color .15s ease-in-out,box-shadow .15s 
-}
-
-#percent {
-	font-size: 1.5em;
-	margin: 10px;
+/* only used for background overlay not needed for centering */
+.inputTextSong:before {
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.315);
+    z-index: -1;
+    border-radius: 10px;
 }

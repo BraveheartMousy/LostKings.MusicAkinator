@@ -1,8 +1,12 @@
-var userAnswers = [];
-function start() {
+let userAnswers = [];
+// let urlDev = 'http://localhost:57181/api/audio/search'
+let urlDev = 'http://localhost:5000/api/audio/search'
+
+$(document).ready(function(){
+$("#inputSongText").submit(function( event ) {
 	userAnswers = [];
 	$.ajax({
-		url: 'http://localhost:57181/api/audio/search',
+		url: urlDev,
 		type: 'GET',
 		contentType: "application/json",
 		crossDomain: true,		
@@ -13,7 +17,8 @@ function start() {
 			errorAlert(xhr, thrownError);
 		}
 	});
-}
+	event.preventDefault();
+  });
 
 function errorAlert(xhr, thrownError) {
 	if (xhr.status === 429) {
@@ -22,3 +27,5 @@ function errorAlert(xhr, thrownError) {
 		alert("Status: " + xhr.status + "\nError: "+ thrownError);
 	}
 }
+});
+
