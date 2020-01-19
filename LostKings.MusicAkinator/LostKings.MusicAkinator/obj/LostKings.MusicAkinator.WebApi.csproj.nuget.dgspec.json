@@ -1,28 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "C:\\projects\\4 INT20H\\LostKings.MusicAkinator\\LostKings.MusicAkinator\\LostKings.MusicAkinator.WebApi.csproj": {}
+    "E:\\LostKings.MusicAkinator\\LostKings.MusicAkinator\\LostKings.MusicAkinator\\LostKings.MusicAkinator.WebApi.csproj": {}
   },
   "projects": {
-    "C:\\projects\\4 INT20H\\LostKings.MusicAkinator\\LostKings.MusicAkinator\\LostKings.MusicAkinator.WebApi.csproj": {
+    "E:\\LostKings.MusicAkinator\\LostKings.MusicAkinator\\LostKings.MusicAkinator\\LostKings.MusicAkinator.WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\projects\\4 INT20H\\LostKings.MusicAkinator\\LostKings.MusicAkinator\\LostKings.MusicAkinator.WebApi.csproj",
+        "projectUniqueName": "E:\\LostKings.MusicAkinator\\LostKings.MusicAkinator\\LostKings.MusicAkinator\\LostKings.MusicAkinator.WebApi.csproj",
         "projectName": "LostKings.MusicAkinator.WebApi",
-        "projectPath": "C:\\projects\\4 INT20H\\LostKings.MusicAkinator\\LostKings.MusicAkinator\\LostKings.MusicAkinator.WebApi.csproj",
+        "projectPath": "E:\\LostKings.MusicAkinator\\LostKings.MusicAkinator\\LostKings.MusicAkinator\\LostKings.MusicAkinator.WebApi.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\projects\\4 INT20H\\LostKings.MusicAkinator\\LostKings.MusicAkinator\\obj\\",
+        "outputPath": "E:\\LostKings.MusicAkinator\\LostKings.MusicAkinator\\LostKings.MusicAkinator\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

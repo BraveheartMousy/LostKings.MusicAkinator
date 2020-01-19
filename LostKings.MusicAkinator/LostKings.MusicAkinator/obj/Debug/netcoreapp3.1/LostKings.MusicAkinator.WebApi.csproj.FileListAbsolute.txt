@@ -10,7 +10,6 @@ E:\LostKings.MusicAkinator\LostKings.MusicAkinator\LostKings.MusicAkinator\bin\D
 E:\LostKings.MusicAkinator\LostKings.MusicAkinator\LostKings.MusicAkinator\bin\Debug\netcoreapp3.1\LostKings.MusicAkinator.WebApi.pdb
 E:\LostKings.MusicAkinator\LostKings.MusicAkinator\LostKings.MusicAkinator\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 E:\LostKings.MusicAkinator\LostKings.MusicAkinator\LostKings.MusicAkinator\obj\Debug\netcoreapp3.1\LostKings.MusicAkinator.WebApi.csprojAssemblyReference.cache
-E:\LostKings.MusicAkinator\LostKings.MusicAkinator\LostKings.MusicAkinator\obj\Debug\netcoreapp3.1\LostKings.MusicAkinator.WebApi.csproj.CoreCompileInputs.cache
 E:\LostKings.MusicAkinator\LostKings.MusicAkinator\LostKings.MusicAkinator\obj\Debug\netcoreapp3.1\LostKings.MusicAkinator.WebApi.MvcApplicationPartsAssemblyInfo.cache
 E:\LostKings.MusicAkinator\LostKings.MusicAkinator\LostKings.MusicAkinator\obj\Debug\netcoreapp3.1\LostKings.MusicAkinator.WebApi.AssemblyInfoInputs.cache
 E:\LostKings.MusicAkinator\LostKings.MusicAkinator\LostKings.MusicAkinator\obj\Debug\netcoreapp3.1\LostKings.MusicAkinator.WebApi.AssemblyInfo.cs
