@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Orbitron');
 
 
-.suggestedSong, .form4 {
+#suggestedSong, #form3 {
 	display: none;
 }
 
@@ -10,7 +10,12 @@ body {
 	font-size: 16px !important;
 	letter-spacing: 3px;
 	height: 100vh;
-	width: 100vw;
+	width: 100vw;	
+}
+
+h1 {
+	text-align: center;
+	width: 100%;
 }
 
 #cover {
@@ -29,8 +34,7 @@ body {
     z-index: 1;
 }
 
-/* only used for background overlay not needed for centering */
-.inputTextSong:before {
+.white-background:before {
     content: '';
     height: 100%;
     left: 0;
@@ -40,4 +44,27 @@ body {
     background-color: rgba(255, 255, 255, 0.315);
     z-index: -1;
     border-radius: 10px;
+}
+
+audio:hover, audio:focus, audio:active {
+	-webkit-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+	-moz-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+	box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+	-webkit-transform: scale(1.05);
+	-moz-transform: scale(1.05);
+	transform: scale(1.05);
+}
+
+audio {
+	width: 100%;
+	-webkit-transition:all 0.5s linear;
+	-moz-transition:all 0.5s linear;
+	-o-transition:all 0.5s linear;
+	transition:all 0.5s linear;
+}
+
+@media screen and (min-width: 768px){
+	audio {
+		width: 70%;
+	}
 }

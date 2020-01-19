@@ -13,18 +13,29 @@
 	<section id="cover" class="min-vh-100">
 		<div id="cover-caption">
 			<div class="container">
-				<div class="row text-white">
+				<div class="row text-white text-center">
+					<h1>Music Akinator</h1>
 					<div class="col-xl-7 col-lg-8 col-md-10 col-sm-10 mx-auto text-center form p-4">
-						<section class="inputTextSong">
-							<h1>Music Akinator</h1>
+						<section id="inputTextSong" class="white-background">
 							<form id="inputSongText">
 								<div class="input-group mb-3">
-									<input type="text" class="form-control" placeholder="Enter song text here" aria-label="Song text" aria-describedby="song-text">
+									<input type="text" class="form-control" size="100" placeholder="Enter song text here" aria-label="Song text" aria-describedby="song-text">
 									<div class="input-group-append">
-										<button class="btn btn-primary" type="submit" id="song-text" size="100">Go!</button>
+										<button class="btn btn-primary" type="submit" id="song-text">Go!</button>
 									</div>
 								</div>
 							</form>
+						</section>
+						<section id="suggestedSong" class="white-background">
+							<p>Song author - Song name</p>
+							<audio controls>
+								<source src="https://www.computerhope.com/jargon/m/example.mp3" type="audio/mpeg" />
+							  	Your browser does not support the audio element.
+							</audio>
+							
+							<p>Is it your song?</p>
+							<button class="btn btn-success" onclick="songMatched()">Yes :3</button>
+							<button class="btn btn-danger" onclick="songNotMatched()">No :c</button>
 						</section>
 					</div>
 				</div>

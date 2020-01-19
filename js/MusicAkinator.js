@@ -11,7 +11,8 @@ $("#inputSongText").submit(function( event ) {
 		contentType: "application/json",
 		crossDomain: true,		
 		success: function (result) {
-			alert(result);
+			//alert(result);
+			showSecondForm(result);
 		},
 		error: function (xhr, ajaxOptions, thrownError) {
 			errorAlert(xhr, thrownError);
@@ -26,6 +27,12 @@ function errorAlert(xhr, thrownError) {
 	} else {
 		alert("Status: " + xhr.status + "\nError: "+ thrownError);
 	}
+}
+
+function showSecondForm(result) {
+	console.log(result);
+	$('#inputTextSong, #form3').hide();
+	$('#suggestedSong').show();
 }
 });
 
