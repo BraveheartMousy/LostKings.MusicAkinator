@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Orbitron');
 
-
-#suggestedSong, #form3 {
+#suggestedSong, #raundResult, #gameResult {
 	display: none;
 }
 
@@ -46,6 +45,11 @@ h1 {
     border-radius: 10px;
 }
 
+.white-background {
+	color: black;
+	padding: 30px 30px 5px 30px;
+}
+
 audio:hover, audio:focus, audio:active {
 	-webkit-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
 	-moz-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
@@ -67,4 +71,25 @@ audio {
 	audio {
 		width: 70%;
 	}
+}
+
+#score {
+	font-size: 8pt;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	text-align: center;
+}
+
+#score p {
+	margin-bottom: 0px;
+	background-color: rgba(255, 129, 223, 0.533);
+	border-radius: 10px;
+	padding: 5px 15px 5px 15px;
+	margin: 2px;
+}
+
+#inputTextSong {
+	margin-bottom: 30px;
 }
