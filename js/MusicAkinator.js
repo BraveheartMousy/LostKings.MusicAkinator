@@ -23,6 +23,7 @@ $(document).ready(function(){
 			},
 			crossDomain: true,		
 			success: function (result) {
+				// Todo: to add error handling
 				results.push(result['result']);
 				showGuessForm();
 			},
@@ -48,16 +49,19 @@ function showGuessForm() {
 		$('#songTitle').text(results[gameNumber-1][attemptNumber].title);
 		$('#audioUrl').attr("src", results[gameNumber-1][attemptNumber].previewLink);
 		attemptNumber++;
-		resetAudio();
+		$('#inputSongTextForm, #raundResult, #gameResult').hide();
+		$('#suggestedSong').show();
 	} else {
 		// ToDo: add logic for less number of attempts
-		alert(`I have just ${results[gameNumber-1].length} songs, so I lose`);
+		scoreUser++;
+		$('#raundAdditionalText').text(`I have no ideas, so you won this raund`);
 		showRaundResultForm();
+		
+		
 	}
 	updateScoreHTML();
-	$('#inputSongTextForm, #raundResult, #gameResult').hide();
-	$('#suggestedSong').show();
-	$('#songTextInput').val("");
+	resetAudio();
+	
 }
 
 function updateScoreHTML(){
@@ -93,6 +97,7 @@ function showRaundResultForm() {
 }
 
 function showGameResult() {
+	$('#songTextInput').val("");
 	$('#inputSongTextForm, #suggestedSong, #raundResult').hide();
 	$('#gameResult').show(); 
 }
@@ -101,6 +106,7 @@ function newRaund() {
 	attemptNumber = 0;
 	gameNumber++;
 	updateScoreHTML();
+	$('#raundAdditionalText').text('');
 	$('#suggestedSong, #raundResult, #gameResult').hide();
 	$('#inputSongTextForm').show(); 
 }
