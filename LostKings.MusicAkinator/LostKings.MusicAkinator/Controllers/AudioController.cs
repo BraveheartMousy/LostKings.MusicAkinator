@@ -1,5 +1,6 @@
 ﻿using LostKings.MusicAkinator.WebApi.Models;
 using LostKings.MusicAkinator.WebApi.Services;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -54,22 +55,15 @@ namespace LostKings.MusicAkinator.WebApi.Controllers
                 }
                 if (!songList.Any())
                 {
-                    return new JsonResult(new Error()
-                    {
-                        Status = HttpStatusCode.NoContent
-                    });
+                    return new NoContentResult();
                 }
                 songs.Status = HttpStatusCode.OK;
                 songs.Result = songList;
                 return new JsonResult(songs);
             }
             catch (Exception ex)
-            {
-                return new JsonResult(new Error()
-                {
-                    Status = HttpStatusCode.InternalServerError,
-                    ErrorMessage = ex.Message
-                });
+            {                
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
             }
         }
     }

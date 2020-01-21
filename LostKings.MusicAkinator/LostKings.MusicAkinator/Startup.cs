@@ -29,7 +29,7 @@ namespace LostKings.MusicAkinator.WebApi
                     .AllowAnyMethod()
                     .AllowAnyHeader());
             });
-            string auddUrl = Configuration.GetValue<string>("AuddService");
+            string auddUrl = Configuration.GetValue<string>("AuddService:url");
             string deezerUrl = Configuration.GetValue<string>("DeezerService");
             services.AddHttpClient<IAuddService, AuddService>(client =>
             {
