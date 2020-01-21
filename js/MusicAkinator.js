@@ -1,4 +1,4 @@
-let urlDev = 'http://localhost:5000/api/audio/search'
+let host = 'http://localhost:5000'
 let totalAttempt = 5;
 let attemptNumber = 0;
 let gameNumber = 1;
@@ -10,14 +10,21 @@ $(document).ready(function(){
 	$("#totalAttemptNumber").text(totalAttempt);
 	updateScoreHTML();
 
-	$("#inputSongText").submit(function( event ) {
+	$('#inputSongTextForm').submit(function() {
+		// ToDo: add spiner for request executing
+		// toDo: validatin of empty string in input
+		let textSong = $('#songTextInput').val();
 		$.ajax({
-			url: urlDev,
+			url: host + '/api/audio/search',
 			type: 'GET',
 			contentType: "application/json",
+			data: {
+				songText: textSong
+			},
 			crossDomain: true,		
 			success: function (result) {
-				showGuessForm(result);
+				results.push(result['result']);
+				showGuessForm();
 			},
 			error: function (xhr, ajaxOptions, thrownError) {
 				errorAlert(xhr, thrownError);
@@ -35,15 +42,22 @@ function errorAlert(xhr, thrownError) {
 	}
 }
 
-function showGuessForm(result) {
-	// console.log(result);
-	results.push(result);
-	attemptNumber++;
+function showGuessForm() {
+	if(results[gameNumber-1].length > attemptNumber) {
+		$('#songAuthor').text(results[gameNumber-1][attemptNumber].artist);
+		$('#songTitle').text(results[gameNumber-1][attemptNumber].title);
+		$('#audioUrl').attr("src", results[gameNumber-1][attemptNumber].previewLink);
+		attemptNumber++;
+		resetAudio();
+	} else {
+		// ToDo: add logic for less number of attempts
+		alert(`I have just ${results[gameNumber-1].length} songs, so I lose`);
+		showRaundResultForm();
+	}
 	updateScoreHTML();
-	// toDo update html with real results
-	$('#inputTextSong, #raundResult, #gameResult').hide();
+	$('#inputSongTextForm, #raundResult, #gameResult').hide();
 	$('#suggestedSong').show();
-	$('#SongTextInput').val("");
+	$('#songTextInput').val("");
 }
 
 function updateScoreHTML(){
@@ -57,6 +71,7 @@ function updateScoreHTML(){
 function songGuessed() {
 	scoreAkinator++;
 	showRaundResultForm();
+	resetAudio();
 }
 
 // pressed No
@@ -67,17 +82,18 @@ function nextAttempt() {
 		scoreUser++;
 		showRaundResultForm();
 	}
+	resetAudio();
 }
 
 function showRaundResultForm() {
 	updateScoreHTML();
-	$('#inputTextSong, #suggestedSong, #gameResult').hide();
+	$('#inputSongTextForm, #suggestedSong, #gameResult').hide();
 	$('#raundResult').show(); 
 
 }
 
 function showGameResult() {
-	$('#inputTextSong, #suggestedSong, #raundResult').hide();
+	$('#inputSongTextForm, #suggestedSong, #raundResult').hide();
 	$('#gameResult').show(); 
 }
 
@@ -86,7 +102,7 @@ function newRaund() {
 	gameNumber++;
 	updateScoreHTML();
 	$('#suggestedSong, #raundResult, #gameResult').hide();
-	$('#inputTextSong').show(); 
+	$('#inputSongTextForm').show(); 
 }
 
 function resetGameValues() {
@@ -101,5 +117,11 @@ function newGame() {
 	resetGameValues();
 	updateScoreHTML();
 	$('#suggestedSong, #raundResult, #gameResult').hide();
-	$('#inputTextSong').show(); 
+	$('#inputSongTextForm').show(); 
+}
+
+function resetAudio(){
+	let audio = $("#player");
+	audio[0].pause();
+	audio[0].load();
 }
