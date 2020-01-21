@@ -17,20 +17,18 @@
 					<h1>Music Akinator</h1>
 					<div class="col-xl-7 col-lg-8 col-md-10 col-sm-10 mx-auto text-center form white-background">
 					
-						<section id="inputTextSong">
-								<form id="inputSongText">
-									<div class="input-group mb-3">
-										<input id="SongTextInput" type="text" class="form-control" size="100" placeholder="Enter song text here" aria-label="Song text" aria-describedby="song-text">
-										<div class="input-group-append">
-											<button class="btn btn-primary" type="submit" id="song-text">Go!</button>
-										</div>
+							<form id="inputSongTextForm">
+								<div class="input-group mb-3">
+									<input id="songTextInput" type="text" class="form-control" size="100" placeholder="Enter song text here" aria-label="Song text" aria-describedby="song-text">
+									<div class="input-group-append">
+										<button class="btn btn-primary" type="submit" id="song-text">Go!</button>
 									</div>
-								</form>
-							</section>
+								</div>
+							</form>
 							<section id="suggestedSong">
-								<p>Song author - Song name</p>
-								<audio controls>
-									<source src="https://www.computerhope.com/jargon/m/example.mp3" type="audio/mpeg" />
+								<p><span id="songAuthor">...</span> - <span id="songTitle">...</span></p>
+								<audio controls id="player">
+									<source src="https://www.computerhope.com/jargon/m/example.mp3" type="audio/mpeg" id="audioUrl"/>
 									Your browser does not support the audio element.
 								</audio>
 								
@@ -44,6 +42,7 @@
 								<p>Attempt: <span id="attemptNumber">...</span>/<span id="totalAttemptNumber">...</span>, Game: <span id="gameNumber">...</span></p>
 							</section>
 							<section id="raundResult">
+								<p id="raundAdditionalText"></p>
 								<p>Some raund results ... </p>
 								<button class="btn btn-success" onclick="newRaund()">Next raund</button>
 								<button class="btn btn-warning" onclick="showGameResult()">Finish game</button>
