@@ -11,7 +11,7 @@ namespace LostKings.MusicAkinator.WebApi.Services
     public class AuddService : IAuddService
     {
         private readonly HttpClient _httpClient;
-        private readonly static string _uri = "findLyrics?q=";
+        private readonly static string _urlParam = "findLyrics/?q=";
         private readonly static string _statusSuccess = "success";
         private readonly static int _maxSongListLength = 5;
 
@@ -22,7 +22,7 @@ namespace LostKings.MusicAkinator.WebApi.Services
 
         public async Task<AuddResponse> GetSongs(string songText)
         {
-            var responseString = await _httpClient.GetStringAsync(_uri + songText);
+            var responseString = await _httpClient.GetStringAsync(_urlParam + songText);
 
             var response = JsonConvert.DeserializeObject<AuddResponse>(responseString);
 
@@ -32,7 +32,7 @@ namespace LostKings.MusicAkinator.WebApi.Services
             }
             else
             {
-                throw new Exception(response.Status);
+                throw new Exception(responseString);
             }
             return response;
         }

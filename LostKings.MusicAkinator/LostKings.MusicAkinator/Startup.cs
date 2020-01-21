@@ -29,13 +29,15 @@ namespace LostKings.MusicAkinator.WebApi
                     .AllowAnyMethod()
                     .AllowAnyHeader());
             });
+            string auddUrl = Configuration.GetValue<string>("AuddService");
+            string deezerUrl = Configuration.GetValue<string>("DeezerService");
             services.AddHttpClient<IAuddService, AuddService>(client =>
             {
-                client.BaseAddress = new Uri("https://api.audd.io/");
+                client.BaseAddress = new Uri(auddUrl);
             });
             services.AddHttpClient<IDeezerService, DeezerService>(client =>
             {
-                client.BaseAddress = new Uri("https://api.deezer.com/");
+                client.BaseAddress = new Uri(deezerUrl);
             });
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
         }
