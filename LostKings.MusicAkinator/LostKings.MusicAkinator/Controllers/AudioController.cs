@@ -1,13 +1,10 @@
 ﻿using LostKings.MusicAkinator.WebApi.Models;
 using LostKings.MusicAkinator.WebApi.Services;
-using Microsoft.AspNetCore.Cors;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
-using System.Threading.Tasks;
 
 namespace LostKings.MusicAkinator.WebApi.Controllers
 {
@@ -30,25 +27,50 @@ namespace LostKings.MusicAkinator.WebApi.Controllers
         [Throttle(Seconds = 5)]
         public ActionResult<string> Search(string songText)
         {
-            var songs = new Response();
-            var songList = new List<Song>();
-            AuddResponse auddResponse = _auddService.GetSongs(songText).Result;
-            int i = 0;
-            foreach (AuddSong song in auddResponse.Result)
+            try
             {
-                DeezerResponse dezzerResponse = _deezerService.GetSong(song.Title, song.Artist).Result;
-                songList.Add(new Song()
+                var songs = new Response();
+                var songList = new List<Song>();
+                AuddResponse auddResponse = _auddService.GetSongs(songText).Result;
+                int i = 0;
+                foreach (AuddSong song in auddResponse.Result)
                 {
-                    SortNumber = i,
-                    Artist = song.Artist,
-                    Title = song.Title,
-                    PreviewLink = dezzerResponse.Data.FirstOrDefault()?.Preview
-                });
-                i++;
+                    if (!string.IsNullOrEmpty(song.Artist) && !string.IsNullOrEmpty(song.Title))
+                    {
+                        DeezerResponse dezzerResponse = _deezerService.GetSong(song.Title, song.Artist).Result;
+                        string preview = dezzerResponse.Data.FirstOrDefault()?.Preview;
+                        if (!string.IsNullOrEmpty(preview))
+                        {
+                            songList.Add(new Song()
+                            {
+                                SortNumber = i,
+                                Artist = song.Artist,
+                                Title = song.Title,
+                                PreviewLink = preview
+                            });
+                            i++;
+                        }
+                    }
+                }
+                if (!songList.Any())
+                {
+                    return new JsonResult(new Error()
+                    {
+                        Status = HttpStatusCode.NoContent
+                    });
+                }
+                songs.Status = HttpStatusCode.OK;
+                songs.Result = songList;
+                return new JsonResult(songs);
             }
-            songs.Status = HttpStatusCode.OK;
-            songs.Result = songList;
-            return new JsonResult(songs);
+            catch (Exception ex)
+            {
+                return new JsonResult(new Error()
+                {
+                    Status = HttpStatusCode.InternalServerError,
+                    ErrorMessage = ex.Message
+                });
+            }
         }
     }
 }

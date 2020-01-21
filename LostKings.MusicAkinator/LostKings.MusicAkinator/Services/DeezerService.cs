@@ -22,9 +22,8 @@ namespace LostKings.MusicAkinator.WebApi.Services
 
         public async Task<DeezerResponse> GetSong(string title, string artist)
         {
-            var responseString = await _httpClient.GetStringAsync(_uri + _artist + '"' + artist + 
-                "\" " + _track + title + '"' + '"');
-
+            var responseString = await _httpClient.GetStringAsync(_uri + _artist + '"' + artist +
+                    "\" " + _track + title + '"' + '"');
             var response = JsonConvert.DeserializeObject<DeezerResponse>(responseString);
             return response;
         }
