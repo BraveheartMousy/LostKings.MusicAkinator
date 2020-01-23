@@ -31,7 +31,10 @@ namespace LostKings.MusicAkinator.WebApi.Services
 
             if (response?.Status == _statusSuccess)
             {
-                response.Result.RemoveRange(_maxSongListLength, response.Result.Count - _maxSongListLength);
+                if (response.Result.Count > 5)
+                {
+                    response.Result.RemoveRange(_maxSongListLength, response.Result.Count - _maxSongListLength);
+                }                
             }
             else
             {
