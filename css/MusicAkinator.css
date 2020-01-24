@@ -1,24 +1,32 @@
-@import url('https://fonts.googleapis.com/css?family=Orbitron');
+@font-face {
+	font-family: "ZnikomitNo24";
+	src: url("../static/ZnikomitNo24.otf") format("opentype");
+	font-weight: 600;
+}
 
-#suggestedSong, #raundResult, #gameResult {
+@font-face {
+	font-family: "PressStart2P";
+	src: url("../static/PressStart2P-Regular.ttf") format("truetype");
+}
+
+#suggestedSong, #roundResult, #gameResult {
 	display: none;
 }
 
-body {	
-	font-family: Orbitron !important;
-	font-size: 16px !important;
-	letter-spacing: 3px;
+body {
 	height: 100vh;
 	width: 100vw;	
 }
 
 h1 {
+	font-family: ZnikomitNo24;
 	text-align: center;
 	width: 100%;
+	color: white;
 }
 
 #cover {
-    background: #222 url('../static/background.jpg') 100% 100% no-repeat;
+    background: #fff url('../static/background.jpg') 100% 100% no-repeat;
     background-size: cover;
     height: 100%;
     text-align: center;
@@ -40,14 +48,16 @@ h1 {
     position: absolute;
     top: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.315);
+    background-color: rgba(0, 0, 0, 0.596);
     z-index: -1;
     border-radius: 10px;
 }
 
 .white-background {
-	color: black;
+	font-family: PressStart2P;
+	color: white;
 	padding: 30px 30px 5px 30px;
+	font-size: 14px;
 }
 
 audio:hover, audio:focus, audio:active {
@@ -57,6 +67,8 @@ audio:hover, audio:focus, audio:active {
 	-webkit-transform: scale(1.05);
 	-moz-transform: scale(1.05);
 	transform: scale(1.05);
+	border-radius: 25px;
+	user-select: none;
 }
 
 audio {
@@ -65,6 +77,7 @@ audio {
 	-moz-transition:all 0.5s linear;
 	-o-transition:all 0.5s linear;
 	transition:all 0.5s linear;
+	margin-bottom: 10px;
 }
 
 @media screen and (min-width: 768px){
@@ -74,22 +87,43 @@ audio {
 }
 
 #score {
-	font-size: 8pt;
+	font-size: 7pt;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
 	flex-wrap: wrap;
 	text-align: center;
+	margin-top: 20px;
 }
 
 #score p {
 	margin-bottom: 0px;
-	background-color: rgba(255, 129, 223, 0.533);
+	background-color: rgba(255, 255, 255, 0.315);
 	border-radius: 10px;
 	padding: 5px 15px 5px 15px;
 	margin: 2px;
 }
 
-#inputSongTextForm {
-	margin-bottom: 30px;
+.button-main {
+	background: #8828a7;
+	color: white;
+}
+
+.button-secondary {
+	background: #bb35dc;
+	color: white;
+}
+
+#errorInput {
+	color: #bb35dc;
+	text-align: left;
+	font-size: 8pt;
+}
+
+#zero-margin {
+	margin-bottom: 0px !important;
+}
+
+#roundSongList, #gameSongList {
+	text-align: left;
 }
