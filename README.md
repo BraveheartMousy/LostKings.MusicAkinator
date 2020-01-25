@@ -5,7 +5,7 @@
 
 ## Стек технологій:
 - Backend: ASP .NET Core
-- Frontend: HTML5/CSS, Bootstrap 4.2.1, JavaScript, jQuery
+- Frontend: JavaScript, jQuery 3.1.1, Bootstrap 4.2.1, HTML5/CSS
 - For deployment: Heroku, Docker
 
 ## Як запустити проект?
@@ -17,7 +17,7 @@
 "AuddService": {
     "url": "https://api.audd.io/",
     "token": "here your token"
-  },
+  }
 ```
 5. У файлі ```js\MusicAkinator.js``` змінити значення змінної ``` host ``` на значення хоста, на якому запущено backend сервер, наприклад:
 ```js
