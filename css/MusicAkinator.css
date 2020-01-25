@@ -9,7 +9,7 @@
 	src: url("../static/PressStart2P-Regular.ttf") format("truetype");
 }
 
-#suggestedSong, #roundResult, #gameResult {
+#suggestedSong, #roundResult, #gameResult, .spinner-container {
 	display: none;
 }
 
@@ -105,17 +105,17 @@ audio {
 }
 
 .button-main {
-	background: #8828a7;
-	color: white;
-}
-
-.button-secondary {
 	background: #bb35dc;
 	color: white;
 }
 
+.button-secondary {
+	background: #8828a7;
+	color: white;
+}
+
 #errorInput {
-	color: #bb35dc;
+	color: #8828a7;
 	text-align: left;
 	font-size: 8pt;
 }

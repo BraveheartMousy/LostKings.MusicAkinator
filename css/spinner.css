@@ -1,0 +1,42 @@
+.stars1 {
+        fill: #db3eac;
+        animation: flicker 1s linear infinite;
+    }
+
+.stars2 {
+        fill: #bb35dc;
+        animation: flicker 2s linear infinite;
+    }
+
+.stars3 {
+        fill: #cf3b92;
+        animation: flicker 3s linear infinite;
+    }
+
+.stars4 {
+        fill: #c410a6;
+        animation: flicker 4s linear infinite;
+    }
+
+.wandfill {
+        fill: #bb35dc;
+    }
+
+.wand {
+        fill: #8828a7;
+    }    
+  
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+  
+@keyframes flicker {
+    0%, 30%, 22%, 62%, 64%, 64.999%, 70%, 100% {
+        opacity: .99;
+    }
+    20%, 22%, 63%, 63.999%, 65%, 69.999% {
+        opacity: 0.50;
+    }
+}

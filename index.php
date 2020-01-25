@@ -1,1 +1,1 @@
-<?php header( 'Location: /MusicAkinator.html' ) ;  ?>
+<?php header( 'Location: /index.html' ) ;  ?>

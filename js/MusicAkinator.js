@@ -15,6 +15,8 @@ $(document).ready(function(){
 	$('#inputSongTextForm').submit(function() {
 		// ToDo: add spiner for request executing
 		let textSong = $('#songTextInput').val().trim();
+		$('.spinner-container').show();
+		$('#inputSongTextForm').hide();
 		if (textSong === '') { 
 			$('#errorInput').text('Please, enter song text!');
 		} else {
@@ -45,10 +47,12 @@ $(document).ready(function(){
 						showGameResult();
 						console.log('error');
 					}
+					$('.spinner-container').hide();
 					// Todo: to check error handling
 				},
 				error: function (xhr, ajaxOptions, thrownError) {
 					errorAlert(xhr, thrownError);
+					$('.spinner-container').hide();
 				}
 			});
 		}
