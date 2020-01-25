@@ -96,7 +96,7 @@ function updateScoreHTML(){
 
 // pressed Yes
 function songGuessed() {
-	$('#whoIsWinner').text('You win this round!');
+	$('#whoIsWinner').text('I win this round!');
 	scoreAkinator++;
 	suggestedSongs[gameNumber-1][attemptNumber-1].isTrueSong = true;
 	showRoundResultForm();
@@ -109,7 +109,7 @@ function nextAttempt() {
 	if (attemptNumber < totalAttempt) {
 		showGuessForm();
 	} else {
-		$('#whoIsWinner').text('I win this round!');
+		$('#whoIsWinner').text('You win this round!');
 		scoreUser++;
 		showRoundResultForm();
 	}
