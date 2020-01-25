@@ -9,7 +9,7 @@
 - For deployment: Heroku, Docker
 
 ## Як запустити проект?
-1. Встановити dotnet 
+1. Встановити [``` .NET core 3.1 runtime ``` ](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 2. Завантажити проект з репозиторію
 3. Виконати команду ``` dotnet run ``` у каталозі ``` \LostKings.MusicAkinator\LostKings.MusicAkinator ```
 4. Відкрити файл ``` index.html ``` у браузері
