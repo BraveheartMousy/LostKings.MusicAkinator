@@ -45,7 +45,6 @@ $(document).ready(function(){
 					} else {
 						$('#gameAdditionalText').text('Ups... Something went wrong, I must finish the game');
 						showGameResult();
-						console.log('error');
 					}
 					$('.spinner-container').hide();
 					// Todo: to check error handling
@@ -72,7 +71,6 @@ function errorAlert(xhr, thrownError) {
 function showGuessForm() {
 	if(results[gameNumber-1].length > attemptNumber) {
 		suggestedSongs[gameNumber-1].push(results[gameNumber-1][attemptNumber]);
-		console.log(suggestedSongs);
 		$('#songAuthor').text(results[gameNumber-1][attemptNumber].artist);
 		$('#songTitle').text(results[gameNumber-1][attemptNumber].title);
 		$('#audioUrl').attr("src", results[gameNumber-1][attemptNumber].previewLink);
@@ -100,7 +98,6 @@ function updateScoreHTML(){
 function songGuessed() {
 	$('#whoIsWinner').text('You win this round!');
 	scoreAkinator++;
-	console.log(gameNumber-1, attemptNumber-1)
 	suggestedSongs[gameNumber-1][attemptNumber-1].isTrueSong = true;
 	showRoundResultForm();
 	resetAudio();
@@ -108,7 +105,6 @@ function songGuessed() {
 
 // pressed No
 function nextAttempt() {
-	console.log(gameNumber-1, attemptNumber-1)
 	suggestedSongs[gameNumber-1][attemptNumber-1].isTrueSong = false;
 	if (attemptNumber < totalAttempt) {
 		showGuessForm();
@@ -123,7 +119,6 @@ function nextAttempt() {
 function showRoundResultForm() {
 	updateScoreHTML();
 	let roundHtml = '';
-	console.log(suggestedSongs);
 	if (suggestedSongs[gameNumber-1].length !== 0) {
 		roundHtml += '<ol>';
 		for(let i = 0; i < suggestedSongs[gameNumber-1].length; i++) {
@@ -133,7 +128,6 @@ function showRoundResultForm() {
 	} else {
 		roundHtml += '<p>No songs</p>';
 	}
-	console.log(roundHtml);
 	$('#roundSongList').html(roundHtml);
 	$('#inputSongTextForm, #suggestedSong, #gameResult').hide();
 	$('#roundResult').show(); 
