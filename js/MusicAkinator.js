@@ -1,4 +1,4 @@
-let host = 'https://music-akinator.herokuapp.com/'
+let host = 'https://music-akinator.herokuapp.com'
 let totalAttempt = 5;
 let attemptNumber = 0;
 let gameNumber = 1;
