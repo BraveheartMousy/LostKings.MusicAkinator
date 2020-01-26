@@ -38,15 +38,17 @@ namespace LostKings.MusicAkinator.WebApi.Controllers
                 {
                     if (!string.IsNullOrEmpty(song.Artist) && !string.IsNullOrEmpty(song.Title))
                     {
-                        DeezerResponse dezzerResponse = _deezerService.GetSong(song.Title, song.Artist).Result;
+                        string artist = song.Artist.Split('(')[0];
+                        string title = song.Title.Split('(')[0];
+                        DeezerResponse dezzerResponse = _deezerService.GetSong(title, artist).Result;
                         string preview = dezzerResponse.Data.FirstOrDefault()?.Preview;
                         if (!string.IsNullOrEmpty(preview))
-                        {
+                        {                            
                             songList.Add(new Song()
                             {
                                 SortNumber = i,
-                                Artist = song.Artist,
-                                Title = song.Title,
+                                Artist = artist,
+                                Title = title,
                                 PreviewLink = preview
                             });
                             i++;
